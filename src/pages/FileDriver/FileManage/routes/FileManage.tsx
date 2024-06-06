@@ -13,7 +13,7 @@ export const FileManage = () => {
             <div key={item.id}>
               <img
                 className="h-auto max-w-full rounded-lg"
-                src="http://localhost/hachee/api/upload/get-file/1691555660308_image.png"
+                src="http://localhost/Lt_home/api/upload/get-file/1691555660308_image.png"
                 alt=""
               />
             </div>

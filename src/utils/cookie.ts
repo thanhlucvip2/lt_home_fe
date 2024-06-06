@@ -1,4 +1,4 @@
-const storagePrefix = "hachee";
+const storagePrefix = "Lt_home";
 
 const getCookie = (name: string): string | null => {
   const cname = name + "=";

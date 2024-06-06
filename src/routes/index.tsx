@@ -11,7 +11,7 @@ export const AppRoutes = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   useEffect(() => {
-    const metaTitle = "HacheeStudio";
+    const metaTitle = "Lt_homeStudio";
     document.title = metaTitle;
 
     if (currentPath !== "/") {

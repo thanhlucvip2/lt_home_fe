@@ -1,7 +1,7 @@
 {
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": true
   },
   "commit-message-editor.dynamicTemplate": [
     "{type}{scope}: {description}",
@@ -130,7 +130,7 @@
     ".eslintrc.js",
     "dark:text-white"
   ],
-  "cSpell.ignoreWords": ["hachee"],
+  "cSpell.ignoreWords": ["Lt_home"],
   "cSpell.words": ["datepicker", "heroicons", "languagedetector"]
   // "typescript.inlayHints.enumMemberValues.enabled": true,
   // "typescript.inlayHints.variableTypes.enabled": true,

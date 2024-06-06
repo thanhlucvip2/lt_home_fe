@@ -3,13 +3,13 @@ import {
   UseQueryOptions,
   UseMutationOptions,
   DefaultOptions,
-} from "@tanstack/react-query";
-import { AxiosError } from "axios";
-import { Promisable } from "type-fest";
+} from '@tanstack/react-query';
+import { AxiosError } from 'axios';
+import { Promisable } from 'type-fest';
 
 const queryConfig: DefaultOptions = {
   queries: {
-    // useErrorBoundary: true,
+    useErrorBoundary: true,
     refetchOnWindowFocus: false,
     retry: false,
   },
@@ -22,7 +22,7 @@ export type ExtractFnReturnType<FnType extends (...args: any) => any> =
 
 export type QueryConfig<QueryFnType extends (...args: any) => any> = Omit<
   UseQueryOptions<ExtractFnReturnType<QueryFnType>>,
-  "queryKey" | "queryFn"
+  'queryKey' | 'queryFn'
 >;
 
 export type MutationConfig<MutationFnType extends (...args: any) => any> =

@@ -45,7 +45,7 @@ export const Login = () => {
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
             alt="logo"
           />
-          Hachee
+          Lt_home
           <Loading />
         </a>
         <div className="w-full border bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
