@@ -8,6 +8,10 @@ import "./style.scss";
 import { ROUTES } from "src/utils/constants";
 
 const { Home } = lazyImport(() => import("src/pages/Home/"), "Home");
+const { FileManage } = lazyImport(
+  () => import("src/pages/FileDriver/FileManage/"),
+  "FileManage"
+);
 
 const App = () => {
   return (
@@ -28,6 +32,10 @@ export const protectedRoutes = [
       {
         path: ROUTES.PROTECTED.FILE_DRIVER.INDEX,
         children: [
+          {
+            path: ROUTES.PROTECTED.FILE_DRIVER.DRIVER,
+            element: <FileManage />,
+          },
           {
             path: ROUTES.PROTECTED.FILE_DRIVER.UPLOAD,
             element: <div>upload file</div>,
