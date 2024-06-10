@@ -2,10 +2,6 @@
   "name": "Lt_home",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "20.x",
-    "yarn": "1.22.22"
-  },
   "scripts": {
     "start:dev": "react-scripts start",
     "build": "react-scripts build",
