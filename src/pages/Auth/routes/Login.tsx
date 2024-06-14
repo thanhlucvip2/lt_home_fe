@@ -64,6 +64,7 @@ export const Login = () => {
                       message: "Đăng nhập thành công!",
                       type: "success",
                     });
+                    setLoading(false);
                   })
                   .catch(() => {
                     addNotification({
