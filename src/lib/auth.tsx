@@ -12,15 +12,23 @@ import {
   RegisterCredentialsDTO,
 } from "./auth-api";
 
+let userData: any = null;
 async function handleUserResponse(data: UserResponse) {
   const {
     data: { token },
   } = data;
   cookie.setToken(token);
-  return await getUser();
+
+  if (userData === null) {
+    userData = await getUser();
+  }
+  useProfile.setState({
+    userProfile: userData,
+  });
+
+  return token;
 }
 
-let userData: any = null;
 async function userFn() {
   if (cookie.getToken()) {
     if (userData === null) {
@@ -31,20 +39,19 @@ async function userFn() {
     });
     return userData;
   }
-
   return null;
 }
 
 async function loginFn(data: LoginCredentialsDTO) {
   const response = await loginWithEmailAndPassword(data);
-  const user = await handleUserResponse(response);
-  return user;
+  const token = await handleUserResponse(response);
+  return token;
 }
 
 async function registerFn(data: RegisterCredentialsDTO) {
   const response = await registerWithEmailAndPassword(data);
-  const user = await handleUserResponse(response);
-  return user;
+  const token = await handleUserResponse(response);
+  return token;
 }
 
 async function logoutFn() {
