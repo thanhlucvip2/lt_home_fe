@@ -19,6 +19,7 @@ export type ResponseData<T> = {
     limit: number;
     page: number;
     total: number;
+    sortBy: string;
   };
 };
 
@@ -28,4 +29,4 @@ export type ResponseDetailData<T> = {
   success: string;
 };
 
-export type TypeFile = "FILE" | "FOLDER"
+export type TypeFile = "FILE" | "FOLDER";

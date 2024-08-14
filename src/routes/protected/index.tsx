@@ -12,6 +12,10 @@ const { FileManage } = lazyImport(
   () => import("src/pages/FileDriver/FileManage/"),
   "FileManage"
 );
+const { ProductList } = lazyImport(
+  () => import("src/pages/Products/ProductList"),
+  "ProductList"
+);
 
 const App = () => {
   return (
@@ -39,6 +43,15 @@ export const protectedRoutes = [
           {
             path: ROUTES.PROTECTED.FILE_DRIVER.UPLOAD,
             element: <div>upload file</div>,
+          },
+        ],
+      },
+      {
+        path: ROUTES.PROTECTED.PRODUCTS.INDEX,
+        children: [
+          {
+            path: ROUTES.PROTECTED.PRODUCTS.LIST,
+            element: <ProductList />,
           },
         ],
       },

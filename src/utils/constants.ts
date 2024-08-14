@@ -19,6 +19,10 @@ export const ROUTES = {
       DRIVER: "",
       UPLOAD: "upload",
     },
+    PRODUCTS: {
+      INDEX: "products",
+      LIST: "list",
+    },
   },
   PUBLIC: {
     PAGE_NOT_FOUND: {
@@ -51,6 +55,20 @@ export const SIDE_BAR: Sidebar[] = [
         ICON: "",
         ROLE: ROLES.ADMIN as Roles,
         ROUTES: ROUTES.PROTECTED.FILE_DRIVER.UPLOAD,
+      },
+    ],
+  },
+  {
+    LABEL: "Products",
+    ICON: "",
+    ROLE: ROLES.USER as Roles,
+    ROUTES: ROUTES.PROTECTED.PRODUCTS.INDEX,
+    CHILDREN: [
+      {
+        LABEL: "List",
+        ICON: "",
+        ROLE: ROLES.USER as Roles,
+        ROUTES: ROUTES.PROTECTED.PRODUCTS.LIST,
       },
     ],
   },
